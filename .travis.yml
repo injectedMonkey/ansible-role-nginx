@@ -78,4 +78,4 @@ script:
     || (echo 'HTTPS Status test: failed' && exit 1)
 
 notifications:
-  # Notify Ansible Galaxy when a role builds successfully.
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

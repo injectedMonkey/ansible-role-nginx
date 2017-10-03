@@ -2,6 +2,8 @@ Nginx
 =====
 
 [![Build Status](https://travis-ci.org/injectedMonkey/ansible-role-nginx.svg?branch=master)](https://travis-ci.org/injectedMonkey/ansible-role-nginx)
+[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
+[![GitHub release](https://img.shields.io/github/release/injectedMonkey/ansible-role-nginx.svg?style=flat)](https://github.com/injectedMonkey/ansible-role-nginx/releases)
 
 Simple nginx role. It's designed for my development environment
 but might reach sometimes production ready state. It supports Debian/Ubuntu.
