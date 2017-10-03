@@ -1,0 +1,20 @@
+galaxy_info:
+  author: injectedMonkey
+  description: simple nginx role for development environments.
+  company: injectedMonkey.wtf
+  license: license (BSD)
+  min_ansible_version: 2.4
+  platforms:
+    - name: Debian
+      versions:
+      - jessie
+    - name: Ubuntu
+      versions:
+      - xenial
+      - trusty
+  galaxy_tags:
+    - development
+    - nginx
+    - ubuntu
+    - unstable
+dependencies: []
