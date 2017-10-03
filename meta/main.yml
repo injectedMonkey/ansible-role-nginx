@@ -16,5 +16,6 @@ galaxy_info:
     - development
     - nginx
     - ubuntu
+    - debian
     - unstable
 dependencies: []
