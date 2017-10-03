@@ -1,7 +1,7 @@
 Nginx
 =====
 
-[![Build Status](https://travis-ci.org/injectedMonkey/test.svg?branch=master)](https://travis-ci.org/injectedMonkey/test)
+[![Build Status](https://travis-ci.org/injectedMonkey/ansible-role-nginx.svg?branch=master)](https://travis-ci.org/injectedMonkey/ansible-role-nginx)
 
 Simple nginx role. It's designed for my development environment
 but might reach sometimes production ready state. It supports Debian/Ubuntu.
