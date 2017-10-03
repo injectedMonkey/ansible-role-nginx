@@ -17,7 +17,7 @@
     url: http://nginx.org/keys/nginx_signing.key
     state: present
 
-- name: add nginx mainline deb repositories key
+- name: add nginx mainline deb repositories
   become: true
   apt_repository:
     repo: 'deb http://nginx.org/packages/mainline/{{ ansible_distribution|lower }}/ {{ ansible_distribution_release|lower }} nginx'
