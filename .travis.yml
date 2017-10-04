@@ -57,7 +57,6 @@ script:
   - >
     docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1
 
-    #curl -X HEAD -s -S -I -H "Host: ${test_url}" --resolve ${test_url}:80:127.0.0.1 --verbose http://${test_url}/
     curl -X HEAD -I http://${test_url}/
     | grep -q 'HTTP/1.1 301 Moved Permanently'
     && (echo 'HTTP Status test: passed' && exit 0)
@@ -66,7 +65,6 @@ script:
   - >
     docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1
 
-    #curl -X HEAD -s -S -I -H "Host: ${test_url}" --resolve ${test_url}:80:127.0.0.1 --verbose https://${test_url}/
     curl -X HEAD -I https://${test_url}/
     | grep -q 'HTTP/1.1 200 OK'
     && (echo 'HTTPS Status test: passed' && exit 0)
