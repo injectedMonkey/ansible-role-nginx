@@ -1,2 +1,5 @@
 ---
-# vars file for nginx 
+# vars file for nginx
+#
+# This playbook use Dictionaries! Partially overriding defaults needs
+# 'hash_behaviour = merge' set in your ansible.cfg

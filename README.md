@@ -5,16 +5,25 @@ Nginx
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![GitHub release](https://img.shields.io/github/release/injectedMonkey/ansible-role-nginx.svg?style=flat)](https://github.com/injectedMonkey/ansible-role-nginx/releases)
 
-Simple nginx role. It's designed for my development environment
-but might reach sometimes production ready state. It supports Debian/Ubuntu.
+Ansible role for nginx. It's designed for my development environment
+but might reach sometimes production ready state.
+
+Supported distributions:
+- Debian
+- Ubuntu
 
 This role uses HTTP/2 transport protocoll for that TLS is required, but configured.
 
 Requirements
 ------------
 
-This role is developed with Ansible 2.4. Backwards compatibility is not garanteed.
+This role requires ansible >= 2.4.
 
+Dictionaries are used for configuration. Partially overriding defaults needs
+      'hash_behaviour = merge'
+set in your ansible.cfg or set
+      ANSIBLE_HASH_BEHAVIOUR=merge
+for your environment.
 
 Role Variables
 --------------
@@ -36,7 +45,7 @@ Role Variables
 Dependencies
 ------------
 
-None. But php will be usefull when setting up fastcgi/php-fpm forwarding ;)
+None.
 
 
 Example Playbook
@@ -44,7 +53,7 @@ Example Playbook
 
     - hosts: servers
     - include_role:
-        name: nginx
+        name: injectedMonkey.nginx
       vars:
         nginx:
           user: www-data
@@ -54,7 +63,7 @@ Example Playbook
               document_root: /var/www/example.com
               block_template: static
               environment:
-                APP_ENV: develo
+                APP_ENV: development
 
 License
 -------
