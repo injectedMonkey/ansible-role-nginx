@@ -3,6 +3,6 @@ nginx:
   user: www-data
   group: www-data
   sites:
-    - host_name: example.com
-      document_root: /var/www/example.com
+    - host_name: default.host
+      document_root: /var/www/default.host
       block_template: static

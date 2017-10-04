@@ -5,17 +5,17 @@ env:
   - distro: ubuntu1604
     init: /lib/systemd/systemd
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
-    test_url: example.com
+    test_url: default.host
 
   - distro: ubuntu1404
     init: /sbin/init
     run_opts: ""
-    test_url: example.com
+    test_url: default.host
 
   - distro: debian8
     init: /lib/systemd/systemd
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
-    test_url: example.com
+    test_url: default.host
 
 services:
   - docker
@@ -60,6 +60,7 @@ script:
 
   - >
     docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1
+
     curl -X HEAD -s -S -I -H "Host: ${test_url}" --resolve ${test_url}:80:127.0.0.1 --verbose http://${test_url}/
     | grep -q 'HTTP/1.1 301 Moved Permanently'
     && (echo 'HTTP Status test: passed' && exit 0)
